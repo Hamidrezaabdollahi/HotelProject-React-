@@ -14,7 +14,7 @@ const Hotels = () => {
                 data.map((item) => {
                     return <Link key={item.id} to={`/hotels/${item.id}?lat=${item.latitude}&lng=${item.longitude}`}>
                         <div className={`searchItem ${currentHotel?.id === item.id? "current-hotel": ""}`}>
-                            <img src={item.picture_url.url} alt={item.name} />
+                            <img src={item.thumbnail_url} alt={item.name} />
                             <div className="searchItemDesc">
                                 <p className="smartLocation">{item.smart_location}</p>
                                 <p className="name">{item.name}</p>
